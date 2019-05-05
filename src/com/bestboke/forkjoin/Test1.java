@@ -4,13 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.RecursiveTask;
 
-/**
- * 批量插入数据任务类
- * 利用fork-join框架对数据插入任务进行分组，变成分组插入
- *
- * @author Owen
- * create time:2018/9/23 11:49
- */
 public class Test1 extends RecursiveTask<Integer> {
     //要插入的数据
     List<Integer> records;
@@ -51,4 +44,5 @@ public class Test1 extends RecursiveTask<Integer> {
         System.out.println("插入了：" + Arrays.toString(records.toArray()));
         return records.size();
     }
+
 }
